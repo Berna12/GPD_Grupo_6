@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "69320698172",
+    "firebase_url": "https://dom-gpd.firebaseio.com",
+    "project_id": "dom-gpd",
+    "storage_bucket": "dom-gpd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69320698172:android:5be22669e22f6682691639",
+        "android_client_info": {
+          "package_name": "com.dom_gpd.dom_gpd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69320698172-tl7kt1igdcrf15tkfjf206vr3kmgs064.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfx4DuXNJeGaLjS8eCKSwsSeWZzomYYuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69320698172-tl7kt1igdcrf15tkfjf206vr3kmgs064.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
