@@ -1,8 +1,12 @@
 import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+
+// MODULO / CLASE  / OBJETO QUE CONTENDRA EL MAPA DE LOS ULTIMAS BUSQUEDAS
+
+
 class Busquedas {
-  List<Parametro> parametros;
+  List<Parametro> parametros; //COMPROBAR EL MAP DE LIST DE PARAMETROS
   String uid;
   Busquedas({
     this.parametros,
@@ -25,7 +29,7 @@ class Busquedas {
         "parametros": List<dynamic>.from(parametros.map((x) => x.toMap())),
       };
 }
-
+// RECORDAR QUE SON MAPAS
 class Parametro {
   Parametro({
     this.oficio,

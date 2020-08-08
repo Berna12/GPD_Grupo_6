@@ -4,22 +4,27 @@ import 'package:rep_gpd_work/src/utils/Colors.dart';
 //TEXTFIELD EDITADO Y PARAMETRIZADO PARA TODOS LOS CASOS
 
 class TextFieldWidget extends StatelessWidget {
-  final String hintText;
+  final String validator;
   /* final IconData prefixIconData;
   final IconData suffixIconData; */
   final String labelText;
   final TextEditingController controller;
   final TextInputType inputType;
   final bool bandera;
+  final int lenght;
+  final String hintText;
 
   TextFieldWidget({
-    this.hintText,
+    this.validator,
     /*   this.prefixIconData,
     this.suffixIconData, */
     this.labelText,
     this.controller,
     this.inputType,
+    this.lenght,
     this.bandera = true,
+    this.hintText ="",
+
   });
 
   @override
@@ -27,13 +32,14 @@ class TextFieldWidget extends StatelessWidget {
     return TextFormField(
       validator: (value) {
         if (value.isEmpty) {
-          return '' + hintText.toString();
+          return '' + validator.toString();
         }
         return null;
       },
       //textAlign: TextAlign.center,
       keyboardType: inputType,
-      obscureText: hintText == "Contraseña Requerido" ? true : false,
+      maxLines:  lenght == null ? 1 : lenght,
+      obscureText: validator == "Contraseña Requerido" ? true : false,
       controller: controller,
       cursorColor: Utils.colorgreen,
       textAlign: bandera == false ? TextAlign.center : TextAlign.start,
@@ -58,6 +64,8 @@ class TextFieldWidget extends StatelessWidget {
           ),
         ),
         labelText: labelText,
+        hintText: hintText,
+        hintStyle: TextStyle(color:Colors.white)
       ),
     );
   }
